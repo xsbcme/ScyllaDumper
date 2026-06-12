@@ -224,3 +224,7 @@ DumperClient.exe
 - 通信方式：4 MB 命名共享内存段 + 双向 `SynchronizationEvent`
 - 共享内存布局：`DUMPER_SHARED_HEADER`（命令 + 状态 + 参数联合体）+ 紧随其后的数据缓冲区
 - 支持命令数：15 条（覆盖进程操作、内存读写、模块 / 线程 / 进程枚举等）
+
+## 许可证
+
+本项目基于 MIT License 开源，详见 [LICENSE](LICENSE)。
