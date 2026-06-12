@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Common">
+      <UniqueIdentifier>{a1b2c3d4-e5f6-7890-abcd-ef1234567890}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{b2c3d4e5-f6a7-8901-bcde-f12345678901}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{c3d4e5f6-a7b8-9012-cdef-123456789012}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{d4e5f6a7-b8c9-0123-def0-234567890123}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ThirdParty\CodeVirtualizer\ViaASMModule">
+      <UniqueIdentifier>{f6a7b8c9-d0e1-2345-f012-456789012345}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ThirdParty">
+      <UniqueIdentifier>{5437ff2b-6bd1-4cf2-a071-1e0dafa60819}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ThirdParty\CodeVirtualizer">
+      <UniqueIdentifier>{6e9a0352-885a-4b4d-a240-debd295a1d22}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="DumperClient.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DumperClientDriver.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DumperClientUser.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PeParser.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ImportResolver.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ImportRebuilder.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="IATSearch.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PeRebuild.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ClientUtils.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="InteractiveSession.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="DumperClient.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DumperClientDetail.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PeParser.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ImportResolver.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ImportRebuilder.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="IATSearch.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PeRebuild.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ClientUtils.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="InteractiveSession.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DebugLog.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\DumperProtocol.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="ThirdParty\CodeVirtualizer\ViaASMModule\VirtualizerSDKMacros.h">
+      <Filter>ThirdParty\CodeVirtualizer\ViaASMModule</Filter>
+    </ClInclude>
+    <ClInclude Include="ThirdParty\CodeVirtualizer\ViaASMModule\VirtualizerSDKCustomVMsMacros.h">
+      <Filter>ThirdParty\CodeVirtualizer\ViaASMModule</Filter>
+    </ClInclude>
+    <ClInclude Include="ThirdParty\CodeVirtualizer\VirtualizerSDK.h">
+      <Filter>ThirdParty\CodeVirtualizer</Filter>
+    </ClInclude>
+    <ClInclude Include="ThirdParty\CodeVirtualizer\VirtualizerSDK_BorlandC_inline.h">
+      <Filter>ThirdParty\CodeVirtualizer</Filter>
+    </ClInclude>
+    <ClInclude Include="ThirdParty\CodeVirtualizer\VirtualizerSDK_CustomVMs.h">
+      <Filter>ThirdParty\CodeVirtualizer</Filter>
+    </ClInclude>
+    <ClInclude Include="ThirdParty\CodeVirtualizer\VirtualizerSDK_CustomVMs_BorlandC_inline.h">
+      <Filter>ThirdParty\CodeVirtualizer</Filter>
+    </ClInclude>
+    <ClInclude Include="ThirdParty\CodeVirtualizer\VirtualizerSDK_CustomVMs_GNU_inline.h">
+      <Filter>ThirdParty\CodeVirtualizer</Filter>
+    </ClInclude>
+    <ClInclude Include="ThirdParty\CodeVirtualizer\VirtualizerSDK_CustomVMs_ICL_inline.h">
+      <Filter>ThirdParty\CodeVirtualizer</Filter>
+    </ClInclude>
+    <ClInclude Include="ThirdParty\CodeVirtualizer\VirtualizerSDK_CustomVMs_LCC_inline.h">
+      <Filter>ThirdParty\CodeVirtualizer</Filter>
+    </ClInclude>
+    <ClInclude Include="ThirdParty\CodeVirtualizer\VirtualizerSDK_CustomVMs_VC_inline.h">
+      <Filter>ThirdParty\CodeVirtualizer</Filter>
+    </ClInclude>
+    <ClInclude Include="ThirdParty\CodeVirtualizer\VirtualizerSDK_GNU_inline.h">
+      <Filter>ThirdParty\CodeVirtualizer</Filter>
+    </ClInclude>
+    <ClInclude Include="ThirdParty\CodeVirtualizer\VirtualizerSDK_ICL_inline.h">
+      <Filter>ThirdParty\CodeVirtualizer</Filter>
+    </ClInclude>
+    <ClInclude Include="ThirdParty\CodeVirtualizer\VirtualizerSDK_LCC_inline.h">
+      <Filter>ThirdParty\CodeVirtualizer</Filter>
+    </ClInclude>
+    <ClInclude Include="ThirdParty\CodeVirtualizer\VirtualizerSDK_VC_inline.h">
+      <Filter>ThirdParty\CodeVirtualizer</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="DumperClient.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <MASM Include="ThirdParty\CodeVirtualizer\ViaASMModule\VirtualizerSDKMacros.asm">
+      <Filter>ThirdParty\CodeVirtualizer\ViaASMModule</Filter>
+    </MASM>
+    <MASM Include="ThirdParty\CodeVirtualizer\ViaASMModule\VirtualizerSDKCustomVmMacros.asm">
+      <Filter>ThirdParty\CodeVirtualizer\ViaASMModule</Filter>
+    </MASM>
+  </ItemGroup>
+</Project>

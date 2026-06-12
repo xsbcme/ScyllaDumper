@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{B2C3D4E5-5555-6666-7777-888899990000}</ProjectGuid>
+    <RootNamespace>DumperClient</RootNamespace>
+    <ProjectName>DumperClient</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\masm.props" />
+  </ImportGroup>
+  <PropertyGroup>
+    <OutDir>$(SolutionDir)bin\$(Configuration)\$(Platform)\</OutDir>
+    <IntDir>$(SolutionDir)obj\$(ProjectName)\$(Configuration)\$(Platform)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\Common;$(ProjectDir)..\DumperLoader;$(ProjectDir)ThirdParty\CodeVirtualizer;$(ProjectDir)ThirdParty\CodeVirtualizer\ViaASMModule;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <WarningLevel>Level4</WarningLevel>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <AdditionalOptions>/utf-8 %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <UACExecutionLevel>RequireAdministrator</UACExecutionLevel>
+      <AdditionalDependencies>version.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)bin\$(Configuration)\$(Platform)\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\Common;$(ProjectDir)..\DumperLoader;$(ProjectDir)ThirdParty\CodeVirtualizer;$(ProjectDir)ThirdParty\CodeVirtualizer\ViaASMModule;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <WarningLevel>Level4</WarningLevel>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <AdditionalOptions>/utf-8 %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <UACExecutionLevel>RequireAdministrator</UACExecutionLevel>
+      <AdditionalDependencies>version.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)bin\$(Configuration)\$(Platform)\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\Common;$(ProjectDir)ThirdParty\CodeVirtualizer;$(ProjectDir)ThirdParty\CodeVirtualizer\ViaASMModule;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <WarningLevel>Level4</WarningLevel>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <AdditionalOptions>/utf-8 %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <UACExecutionLevel>RequireAdministrator</UACExecutionLevel>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\Common;$(ProjectDir)ThirdParty\CodeVirtualizer;$(ProjectDir)ThirdParty\CodeVirtualizer\ViaASMModule;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <WarningLevel>Level4</WarningLevel>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <AdditionalOptions>/utf-8 %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <UACExecutionLevel>RequireAdministrator</UACExecutionLevel>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="DumperClient.cpp" />
+    <ClCompile Include="DumperClientDriver.cpp" />
+    <ClCompile Include="DumperClientUser.cpp" />
+    <ClCompile Include="PeParser.cpp" />
+    <ClCompile Include="ImportResolver.cpp" />
+    <ClCompile Include="ImportRebuilder.cpp" />
+    <ClCompile Include="IATSearch.cpp" />
+    <ClCompile Include="PeRebuild.cpp" />
+    <ClCompile Include="ClientUtils.cpp" />
+    <ClCompile Include="InteractiveSession.cpp" />
+    <ClCompile Include="Main.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="DumperClient.h" />
+    <ClInclude Include="DumperClientDetail.h" />
+    <ClInclude Include="PeParser.h" />
+    <ClInclude Include="ImportResolver.h" />
+    <ClInclude Include="ImportRebuilder.h" />
+    <ClInclude Include="IATSearch.h" />
+    <ClInclude Include="PeRebuild.h" />
+    <ClInclude Include="ClientUtils.h" />
+    <ClInclude Include="InteractiveSession.h" />
+    <ClInclude Include="DebugLog.h" />
+    <ClInclude Include="..\Common\DumperProtocol.h" />
+    <ClInclude Include="ThirdParty\CodeVirtualizer\ViaASMModule\VirtualizerSDKMacros.h" />
+    <ClInclude Include="ThirdParty\CodeVirtualizer\ViaASMModule\VirtualizerSDKCustomVMsMacros.h" />
+    <ClInclude Include="ThirdParty\CodeVirtualizer\VirtualizerSDK.h" />
+    <ClInclude Include="ThirdParty\CodeVirtualizer\VirtualizerSDK_BorlandC_inline.h" />
+    <ClInclude Include="ThirdParty\CodeVirtualizer\VirtualizerSDK_CustomVMs.h" />
+    <ClInclude Include="ThirdParty\CodeVirtualizer\VirtualizerSDK_CustomVMs_BorlandC_inline.h" />
+    <ClInclude Include="ThirdParty\CodeVirtualizer\VirtualizerSDK_CustomVMs_GNU_inline.h" />
+    <ClInclude Include="ThirdParty\CodeVirtualizer\VirtualizerSDK_CustomVMs_ICL_inline.h" />
+    <ClInclude Include="ThirdParty\CodeVirtualizer\VirtualizerSDK_CustomVMs_LCC_inline.h" />
+    <ClInclude Include="ThirdParty\CodeVirtualizer\VirtualizerSDK_CustomVMs_VC_inline.h" />
+    <ClInclude Include="ThirdParty\CodeVirtualizer\VirtualizerSDK_GNU_inline.h" />
+    <ClInclude Include="ThirdParty\CodeVirtualizer\VirtualizerSDK_ICL_inline.h" />
+    <ClInclude Include="ThirdParty\CodeVirtualizer\VirtualizerSDK_LCC_inline.h" />
+    <ClInclude Include="ThirdParty\CodeVirtualizer\VirtualizerSDK_VC_inline.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="DumperClient.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <MASM Include="ThirdParty\CodeVirtualizer\ViaASMModule\VirtualizerSDKMacros.asm" />
+    <MASM Include="ThirdParty\CodeVirtualizer\ViaASMModule\VirtualizerSDKCustomVmMacros.asm" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DumperLoader\DumperLoader.vcxproj">
+      <Project>{C3D4E5F6-2222-3333-4444-555566667777}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\masm.targets" />
+  </ImportGroup>
+</Project>

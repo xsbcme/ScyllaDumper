@@ -1,0 +1,32 @@
+#include <windows.h>
+
+// 内核驱动：文件属性「详细信息」（字符串保持 ASCII 避免 RC 编码问题）
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION     1,0,0,0
+ PRODUCTVERSION  1,0,0,0
+ FILEFLAGSMASK   VS_FFI_FILEFLAGSMASK
+ FILEFLAGS       0x0L
+ FILEOS          VOS_NT_WINDOWS32
+ FILETYPE        VFT_DRV
+ FILESUBTYPE     VFT2_DRV_SYSTEM
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904B0"
+        BEGIN
+            VALUE "CompanyName",      "xsbcme"
+            VALUE "FileDescription",    "ScyllaDumper kernel driver (shared memory / worker)"
+            VALUE "FileVersion",        "1.0.0.0"
+            VALUE "InternalName",       "DumperDriver"
+            VALUE "LegalCopyright",     "Copyright (C) xsbcme"
+            VALUE "OriginalFilename",   "DumperDriver.sys"
+            VALUE "ProductName",        "ScyllaDumper"
+            VALUE "ProductVersion",     "1.0.0.0"
+            VALUE "Comments",           "Contact: 2974550071@qq.com"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END

@@ -1,0 +1,36 @@
+#include <windows.h>
+
+// 文件属性「详细信息」中显示的公司、版权、说明等（与资源脚本编码无关，建议保持 ASCII）
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION     1,0,0,0
+ PRODUCTVERSION  1,0,0,0
+ FILEFLAGSMASK   VS_FFI_FILEFLAGSMASK
+ FILEFLAGS       0x0L
+ FILEOS          VOS_NT_WINDOWS32
+ FILETYPE        VFT_APP
+ FILESUBTYPE     VFT2_UNKNOWN
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904B0"
+        BEGIN
+            VALUE "CompanyName",      "xsbcme"
+            VALUE "FileDescription",    "ScyllaDumper - kernel dumper client"
+            VALUE "FileVersion",        "1.0.0.0"
+            VALUE "InternalName",       "DumperClient"
+            VALUE "LegalCopyright",     "Copyright (C) xsbcme"
+            VALUE "OriginalFilename",   "DumperClient.exe"
+            VALUE "ProductName",        "ScyllaDumper"
+            VALUE "ProductVersion",     "1.0.0.0"
+            VALUE "Comments",           "Contact: 2974550071@qq.com"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+// IDR_DUMPER_DRIVER: embedded kernel driver (built from DumperDriver project)
+#define IDR_DUMPER_DRIVER 101
+IDR_DUMPER_DRIVER RCDATA "..\Common\DumperDriver_res.sys"

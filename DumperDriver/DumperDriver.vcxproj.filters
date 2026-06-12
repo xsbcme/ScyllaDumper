@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Common">
+      <UniqueIdentifier>{e5f6a7b8-c9d0-1234-ef01-345678901234}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{f6a7b8c9-d0e1-2345-f012-456789012345}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{a7b8c9d0-e1f2-3456-0123-567890123456}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{b8c9d0e1-f2a3-4567-1234-678901234567}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Driver.c"><Filter>Source Files</Filter></ClCompile>
+    <ClCompile Include="SharedMemory.c"><Filter>Source Files</Filter></ClCompile>
+    <ClCompile Include="Worker.c"><Filter>Source Files</Filter></ClCompile>
+    <ClCompile Include="ProcessOps.c"><Filter>Source Files</Filter></ClCompile>
+    <ClCompile Include="MemoryOps.c"><Filter>Source Files</Filter></ClCompile>
+    <ClCompile Include="ModuleEnum.c"><Filter>Source Files</Filter></ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Driver.h"><Filter>Header Files</Filter></ClInclude>
+    <ClInclude Include="Debug.h"><Filter>Header Files</Filter></ClInclude>
+    <ClInclude Include="Globals.h"><Filter>Header Files</Filter></ClInclude>
+    <ClInclude Include="SharedMemory.h"><Filter>Header Files</Filter></ClInclude>
+    <ClInclude Include="Worker.h"><Filter>Header Files</Filter></ClInclude>
+    <ClInclude Include="ProcessOps.h"><Filter>Header Files</Filter></ClInclude>
+    <ClInclude Include="MemoryOps.h"><Filter>Header Files</Filter></ClInclude>
+    <ClInclude Include="ModuleEnum.h"><Filter>Header Files</Filter></ClInclude>
+    <ClInclude Include="..\Common\DumperProtocol.h"><Filter>Common</Filter></ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="DumperDriver.rc"><Filter>Resource Files</Filter></ResourceCompile>
+  </ItemGroup>
+</Project>
